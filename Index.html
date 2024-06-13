@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #header-video {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: #333;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <header id="header-video">
+    <video id="video" controls muted>
+      <source src="Video.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+      <h1>Welcome to my Page</h1>
+      <p>This is another version of me, growing with me. Thank you for your brief companionship and witnessing!</p>
+      <nav>
+        <ul>
+          <li><a href="Reading.html" target="_blank">Reading</a></li>
+          <li><a href="Cooking.html" class="button">Cooking</a></li>
+          <li><a href="travel.html" class="button">Traveling</a></li>
+          <li><a href="#Gym" class="button">Gym</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h2>Why create this website?</h2>
+    <ul>
+      <li>To practice my skills.</li>
+      <li>To let my family and friends get to know more about me, especially mentally.</li>
+      <li>To document my growth.</li>
+    </ul>
+  </main>
+</body>
+</html>
