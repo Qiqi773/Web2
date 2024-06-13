@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Map</title>
+  <style>
+    #map {
+      height: 100vh; /* 使用全屏高度 */
+      width: 100%;
+    }
+  </style>
+  <!-- 引入 Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+</head>
+<body>
+  <h1>My Travel Map</h1>
+  <div id="map"></div>
+  <script>
+    let map;
+
+    async function initMap() {
+      // 位置
+      const position = { lat: 39.9042, lng: 116.4074 }; // 北京的经纬度
+
+      // 请求需要的库
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+      // 初始化地图
+      map = new Map(document.getElementById("map"), {
+        zoom: 4,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+      });
+
+      // 添加标记点
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "北京",
+      });
+    }
+
+    // 初始化地图
+    initMap();
+  </script>
+</body>
+</html>
